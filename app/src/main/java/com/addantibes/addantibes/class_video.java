@@ -93,8 +93,7 @@ public class class_video extends Fragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
-        /*adapter mAdapter = new adapter(Array_texte, Array_image);
-        mRecyclerView.setAdapter(mAdapter);*/
+        /* Le problème est surement là*/
 
         //recyclerView = (RecyclerView) getActivity().findViewById(R.id.recyclerView);
         //recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
