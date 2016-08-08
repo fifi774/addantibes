@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_accueil"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Accueil" />
+        <item
+            android:id="@+id/nav_reunions"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Nos réunions" />
+        <item
+            android:id="@+id/nav_venir"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Venir à l'église" />
+        <item
+            android:id="@+id/nav_annonces"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Annonces de l'église" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Evènements de l'église" />
+    </group>
+
+    <item android:title="Enseignements">
+        <menu>
+            <item
+                android:id="@+id/nav_video"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Messages vidéos" />
+            <item
+                android:id="@+id/nav_audio"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Messages audio" />
+            <item
+                android:id="@+id/nav_ecrit"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Messages écrits" />
+        </menu>
+    </item>
+
+</menu>
