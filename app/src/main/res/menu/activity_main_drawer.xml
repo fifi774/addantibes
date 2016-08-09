@@ -40,5 +40,34 @@
                 android:title="Messages écrits" />
         </menu>
     </item>
+    <item android:title="Nous contacter">
+        <menu>
+            <item
+                android:id="@+id/nav_appeler"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Nous appeller" />
+            <item
+                android:id="@+id/nav_mail"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Nous envoyer un mail" />
+            <item
+                android:id="@+id/nav_site"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Visiter notre site" />
+        </menu>
+    </item>
+
+    <item android:title="Plus d'info">
+        <menu>
+            <item
+                android:id="@+id/nav_youtube"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Notre chaine Youtube" />
+            <item
+                android:id="@+id/nav_facebook"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Notre page Facebook" />
+        </menu>
+    </item>
 
 </menu>

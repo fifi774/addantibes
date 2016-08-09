@@ -1,6 +1,8 @@
 package com.addantibes.addantibes;
 
 import android.app.FragmentManager;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -101,6 +103,36 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_ecrit) {
 
+        } else if (id == R.id.nav_appeler) {
+            // Nous appeller
+            Intent appel = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:0781177721"));
+            startActivity(appel);
+
+        } else if (id == R.id.nav_mail) {
+            // Envoyer un mail
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto","fifi774@gmail.com", null));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Message depuis l'application mobile");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "Votre message");
+            startActivity(Intent.createChooser(emailIntent, "Envoyer un mail avec"));
+
+        }else if (id == R.id.nav_site) {
+            // Visitez le site
+            String url = "http://www.addantibes.com";
+            Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( url ) );
+            startActivity(intent);
+
+        }else if (id == R.id.nav_youtube) {
+            // Visitez le site
+            String url = "https://www.youtube.com/user/addantibes";
+            Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( url ) );
+            startActivity(intent);
+
+        }else if (id == R.id.nav_facebook) {
+            // Visitez le site
+            String url = "https://www.facebook.com/Eglise-Evang%C3%A9lique-Add-Antibes-423206644513009/?ref=ts&fref=ts";
+            Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( url ) );
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
