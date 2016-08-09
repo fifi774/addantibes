@@ -4,23 +4,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_accueil"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_accueil"
             android:title="Accueil" />
         <item
             android:id="@+id/nav_reunions"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_reunion"
             android:title="Nos réunions" />
         <item
             android:id="@+id/nav_venir"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_venir"
             android:title="Venir à l'église" />
         <item
             android:id="@+id/nav_annonces"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_annonce"
             android:title="Annonces de l'église" />
         <item
             android:id="@+id/nav_events"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_evenements"
             android:title="Evènements de l'église" />
     </group>
 
@@ -28,15 +28,15 @@
         <menu>
             <item
                 android:id="@+id/nav_video"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_camera"
                 android:title="Messages vidéos" />
             <item
                 android:id="@+id/nav_audio"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_audio"
                 android:title="Messages audio" />
             <item
                 android:id="@+id/nav_ecrit"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_ecrit"
                 android:title="Messages écrits" />
         </menu>
     </item>
@@ -44,11 +44,11 @@
         <menu>
             <item
                 android:id="@+id/nav_appeler"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_call"
                 android:title="Nous appeller" />
             <item
                 android:id="@+id/nav_mail"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_mail"
                 android:title="Nous envoyer un mail" />
             <item
                 android:id="@+id/nav_site"
@@ -61,11 +61,11 @@
         <menu>
             <item
                 android:id="@+id/nav_youtube"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_youtube"
                 android:title="Notre chaine Youtube" />
             <item
                 android:id="@+id/nav_facebook"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_facebook"
                 android:title="Notre page Facebook" />
         </menu>
     </item>
