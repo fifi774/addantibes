@@ -1,6 +1,8 @@
 package com.addantibes.addantibes;
 
+import android.app.AlarmManager;
 import android.app.FragmentManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,8 +15,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private PendingIntent pendingIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,70 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Alarme deuxieme culte
+        Calendar c = Calendar.getInstance();
+        Date temp = c.getTime();
+        Calendar calendar = Calendar.getInstance();
+
+        //calendar.set(Calendar.DAY_OF_WEEK, 1); // Que le dimanche
+        calendar.set(Calendar.HOUR_OF_DAY, 10);
+        calendar.set(Calendar.MINUTE, 00);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.AM_PM,Calendar.AM);
+        Date pm = calendar.getTime();
+
+        // Alarme réunion dimance apres midi
+        Calendar c2 = Calendar.getInstance();
+        Date temp2 = c2.getTime();
+        Calendar calendar2 = Calendar.getInstance();
+
+        //calendar2.set(Calendar.DAY_OF_WEEK, 1); // Que le dimanche
+        calendar2.set(Calendar.HOUR_OF_DAY, 15);
+        calendar2.set(Calendar.MINUTE, 00);
+        calendar2.set(Calendar.SECOND, 0);
+        calendar2.set(Calendar.AM_PM,Calendar.PM);
+        Date pm2 = calendar2.getTime();
+
+        // Alarme réunion mardi apres midi
+        Calendar c3 = Calendar.getInstance();
+        Date temp3 = c3.getTime();
+        Calendar calendar3 = Calendar.getInstance();
+
+        //calendar2.set(Calendar.DAY_OF_WEEK, 3); // Que le mardi
+        calendar3.set(Calendar.HOUR_OF_DAY, 18);
+        calendar3.set(Calendar.MINUTE, 45);
+        calendar3.set(Calendar.SECOND, 0);
+        calendar3.set(Calendar.AM_PM,Calendar.PM);
+        Date pm3 = calendar3.getTime();
+
+
+        if(pm.after(temp))
+        {
+            Intent myIntent = new Intent(MainActivity.this, MyReceiver.class);
+            pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, myIntent,0);
+
+            AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+            alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
+        }
+
+        if(pm2.after(temp))
+        {
+            Intent myIntent = new Intent(MainActivity.this, MyReceiver.class);
+            pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, myIntent,0);
+
+            AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+            alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
+        }
+
+        if(pm3.after(temp))
+        {
+            Intent myIntent = new Intent(MainActivity.this, MyReceiver.class);
+            pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, myIntent,0);
+
+            AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+            alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
+        }
     }
 
     @Override
